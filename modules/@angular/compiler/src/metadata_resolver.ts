@@ -9,7 +9,6 @@
 import {AnimationAnimateMetadata, AnimationEntryMetadata, AnimationGroupMetadata, AnimationKeyframesSequenceMetadata, AnimationMetadata, AnimationStateDeclarationMetadata, AnimationStateMetadata, AnimationStateTransitionMetadata, AnimationStyleMetadata, AnimationWithStepsMetadata, AttributeMetadata, ChangeDetectionStrategy, ComponentMetadata, HostMetadata, InjectMetadata, Injectable, ModuleWithProviders, OptionalMetadata, Provider, QueryMetadata, SchemaMetadata, SelfMetadata, SkipSelfMetadata, Type, ViewQueryMetadata, resolveForwardRef} from '@angular/core';
 
 import {StringMapWrapper} from '../src/facade/collection';
-
 import {assertArrayOfStrings, assertInterpolationSymbols} from './assertions';
 import * as cpl from './compile_metadata';
 import {DirectiveResolver} from './directive_resolver';
@@ -713,7 +712,7 @@ function flattenArray(tree: any[], out: Array<any> = []): Array<any> {
 }
 
 function isValidType(value: any): boolean {
-  return cpl.isStaticSymbol(value) || (value instanceof Type);
+  return cpl.isStaticSymbol(value) || ((typeof value) === (typeof Type));
 }
 
 function staticTypeModuleUrl(value: any): string {
