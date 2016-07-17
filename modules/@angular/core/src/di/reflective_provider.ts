@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ListWrapper, MapWrapper} from '../facade/collection';
-import {Type, isArray, isBlank, isPresent} from '../facade/lang';
+import {Type, isBlank, isPresent, isArray,} from '../facade/lang';
+import {MapWrapper, ListWrapper} from '../facade/collection';
 import {reflector} from '../reflection/reflection';
 
 import {resolveForwardRef} from './forward_ref';
@@ -188,7 +188,7 @@ function _normalizeProviders(
     providers: Array<Type|Provider|{[k: string]: any}|ProviderBuilder|any[]>,
     res: Provider[]): Provider[] {
   providers.forEach(b => {
-    if (b instanceof Type) {
+    if ((typeof b) === (typeof Type)) {
       res.push(provide(b, {useClass: b}));
 
     } else if (b instanceof Provider) {
@@ -251,7 +251,7 @@ function _extractToken(
   for (var i = 0; i < metadata.length; ++i) {
     var paramMetadata = metadata[i];
 
-    if (paramMetadata instanceof Type) {
+    if ((typeof paramMetadata) === (typeof Type)) {
       token = paramMetadata;
 
     } else if (paramMetadata instanceof InjectMetadata) {
