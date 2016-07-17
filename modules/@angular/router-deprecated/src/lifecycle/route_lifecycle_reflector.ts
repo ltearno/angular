@@ -13,7 +13,7 @@ import {reflector} from '../../core_private';
 import {CanActivate, RouteLifecycleHook} from './lifecycle_annotations_impl';
 
 export function hasLifecycleHook(e: RouteLifecycleHook, type: any /** TODO #9100 */): boolean {
-  if (!(type instanceof Type)) return false;
+  if (!((typeof type) === (typeof Type))) return false;
   return e.name in (<any>type).prototype;
 }
 

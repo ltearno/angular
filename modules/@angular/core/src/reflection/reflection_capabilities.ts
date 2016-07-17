@@ -220,7 +220,7 @@ export class ReflectionCapabilities implements PlatformReflectionCapabilities {
   interfaces(type: Type): any[] { return []; }
 
   hasLifecycleHook(type: any, lcInterface: Type, lcProperty: string): boolean {
-    if (!(type instanceof Type)) return false;
+    if (!((typeof type= === (typeof Type))) return false;
 
     var proto = (<any>type).prototype;
     return !!proto[lcProperty];
