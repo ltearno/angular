@@ -182,7 +182,7 @@ export function mergeResolvedReflectiveProviders(
 
 function _normalizeProviders(providers: Provider[], res: Provider[]): Provider[] {
   providers.forEach(b => {
-    if (b instanceof Type) {
+    if ((typeof b) === (typeof Type)) {
       res.push({provide: b, useClass: b});
 
     } else if (b && typeof b == 'object' && (b as any).provide !== undefined) {
@@ -239,7 +239,7 @@ function _extractToken(
   for (var i = 0; i < metadata.length; ++i) {
     var paramMetadata = metadata[i];
 
-    if (paramMetadata instanceof Type) {
+    if ((typeof paramMetadata) === (typeof Type)) {
       token = paramMetadata;
 
     } else if (paramMetadata instanceof InjectMetadata) {
