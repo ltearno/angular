@@ -186,7 +186,7 @@ function _normalizeProviders(
     providers: Array<Type|Provider|{[k: string]: any}|ProviderBuilder|any[]>,
     res: Provider[]): Provider[] {
   providers.forEach(b => {
-    if ((typeof b) === (typeof Type)) {
+    if (b instanceof Type) {
       res.push(provide(b, {useClass: b}));
 
     } else if (b instanceof Provider) {
