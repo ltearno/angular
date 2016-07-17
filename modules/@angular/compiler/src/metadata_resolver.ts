@@ -10,7 +10,6 @@ import {AnimationAnimateMetadata, AnimationEntryMetadata, AnimationGroupMetadata
 
 import {Console, LIFECYCLE_HOOKS_VALUES, ReflectorReader, createProvider, isProviderLiteral, reflector} from '../core_private';
 import {StringMapWrapper} from '../src/facade/collection';
-
 import {assertArrayOfStrings, assertInterpolationSymbols} from './assertions';
 import * as cpl from './compile_metadata';
 import {CompilerConfig} from './config';
@@ -779,7 +778,7 @@ function verifyNonBlankProviders(
 }
 
 function isValidType(value: any): boolean {
-  return cpl.isStaticSymbol(value) || (value instanceof Type);
+  return cpl.isStaticSymbol(value) || ((typeof value) === (typeof Type));
 }
 
 function staticTypeModuleUrl(value: any): string {
