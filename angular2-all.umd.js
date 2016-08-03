@@ -2,6 +2,7 @@ exports.core = require('@angular/core');
 exports.platformBrowserDynamic = require('@angular/platform-browser-dynamic');
 exports.router = require('@angular/router');
 exports.forms = require('@angular/forms');
+exports.rxjs = require('rxjs');
 //exports.platformBrowser = require('@angular/platform-browser');
 //exports.http = require('@angular/http');
 //exports.rxjs = require('rxjs');
