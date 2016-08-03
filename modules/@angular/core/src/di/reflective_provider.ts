@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {IS_DART, Type, isBlank, isPresent, isArray,} from '../facade/lang';
+import {Type, isBlank, isPresent, isArray,} from '../facade/lang';
 import {MapWrapper, ListWrapper} from '../facade/collection';
 import {reflector} from '../reflection/reflection';
 import {ReflectiveKey} from './reflective_key';
