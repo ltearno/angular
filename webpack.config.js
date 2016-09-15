@@ -4,12 +4,12 @@ var CompressionPlugin = require("compression-webpack-plugin");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-	//entry: "./angular2-all.umd.js",
-    entry: "./angular2-all-material.umd.js",
+	entry: "./angular2-all.umd.js",
+    //entry: "./angular2-all-material.umd.js",
     output: {
         path: path.join(__dirname, "js"),
-        //filename: "angular2-all.umd.js",
-		filename: "angular2-all-material.umd.js",
+        filename: "angular2-all.umd.js",
+		//filename: "angular2-all-material.umd.js",
         library: ["ng"],
         libraryTarget: "var"
     },
