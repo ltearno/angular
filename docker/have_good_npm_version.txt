@@ -1,0 +1,6 @@
+npm uninstall -g npm
+curl -f -L -s https://registry.npmjs.org/npm/-/npm-3.5.3.tgz > npm-3.5.3.tgz
+tar -xvzf npm-3.5.3.tgz
+cd package
+./configure
+make install
