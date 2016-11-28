@@ -7,6 +7,7 @@ RUN cd /root
 
 RUN apt update
 RUN apt install dos2unix
+RUN apt install vim
 
 # https://registry.npmjs.org/npm/-/npm-3.5.3.tgz
 COPY npm-3.5.3.tgz /

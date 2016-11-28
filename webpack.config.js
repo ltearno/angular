@@ -14,7 +14,7 @@ module.exports = {
 		new webpack.optimize.DedupePlugin(),
 		//new webpack.optimize.MinChunkSizePlugin({minChunkSize:2048}),
 		new webpack.optimize.OccurrenceOrderPlugin(false),
-		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.UglifyJsPlugin({mangle:false}),
 		/*new CompressionPlugin({
 			asset: "[path].gz[query]",
 			algorithm: "gzip",

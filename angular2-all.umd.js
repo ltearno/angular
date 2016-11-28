@@ -6,6 +6,8 @@ exports.platformBrowser = 			require('@angular/platform-browser');
 exports.http = 						require('@angular/http');
 exports.rxjs = 						require('rxjs');
 
+exports.primeng =					require('primeng/primeng');
+
 //exports.common = require('@angular/common');
 //exports.compiler = require('@angular/compiler');
 //exports.router_link_dsl = require('@angular/router/router_link_dsl.js');
